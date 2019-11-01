@@ -4,11 +4,11 @@ section .text
 global CMAIN
 CMAIN:
     ;cele doua numere se gasesc in eax si ebx
-    mov eax, 4
-    mov ebx, 5
+    mov eax, 6
+    mov ebx, 7
     
     cmp eax, ebx
-    jnge print
+    jl print
     xchg eax, ebx
     
 print:

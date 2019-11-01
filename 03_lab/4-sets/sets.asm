@@ -19,7 +19,10 @@ CMAIN:
     NEWLINE
 
     ; TODO2: adaugarea unui element in multime
-    or ecx, 768
+    ;or ecx, 768
+    mov edx, 0x1
+    shl edx, 6
+    or ecx, edx
     PRINT_DEC 4, ecx
     NEWLINE
 
@@ -31,18 +34,22 @@ CMAIN:
     NEWLINE
 
     ; TODO4: complementul unei multimi
-    not eax
+    not al
     PRINT_DEC 4, eax
     NEWLINE
 
     ; TODO5: eliminarea unui element
-    and ebx, 168
+    mov edx, 0x1
+    shl edx, 3
+    not edx
+    and ebx, edx
     PRINT_DEC 4, ebx
     NEWLINE
     
 
     ; TODO6: diferenta de multimi EAX-EBX
     mov eax, 139
+    mov ebx, 169
     mov edx, eax
     and edx, ebx
     xor eax, edx
