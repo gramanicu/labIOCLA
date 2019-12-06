@@ -1,0 +1,3 @@
+break * BEGINNING_AREA_OF_INTEREST
+break * 0x8048468
+

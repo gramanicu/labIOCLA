@@ -1,0 +1,21 @@
+
+hello-world.o:     file format elf32-i386
+
+
+Disassembly of section .text:
+
+00000000 <print_message>:
+   0:	55                   	push   ebp
+   1:	89 e5                	mov    ebp,esp
+   3:	68 00 00 00 00       	push   0x0
+   8:	e8 fc ff ff ff       	call   9 <print_message+0x9>
+   d:	83 c4 04             	add    esp,0x4
+  10:	c9                   	leave  
+  11:	c3                   	ret    
+
+00000012 <main>:
+  12:	55                   	push   ebp
+  13:	89 e5                	mov    ebp,esp
+  15:	e8 e6 ff ff ff       	call   0 <print_message>
+  1a:	c9                   	leave  
+  1b:	c3                   	ret    
